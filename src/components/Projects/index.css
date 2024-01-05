@@ -1,0 +1,86 @@
+.project-main-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+  }
+
+.image {
+    height: 250px;
+    width: 300px;
+    margin-right: 20px;
+    margin-top:20px ;
+  }
+  
+  .projects-card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    align-items: center;
+    margin: 10px;
+    width: 60%;
+    justify-content: center;
+    position:relative;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px 3px  #888888 ;
+  }
+  .project-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500px;
+    color: #25282b;
+    font-family: 'Playfair Display';
+    width: 200px;
+  }
+  
+  .project-descr {
+    font-family: Nunito;
+    font-size: 16px;
+    color: Nunito;
+    height: 200px;
+    overflow: auto;
+    width: 350px;
+  }
+  
+  .main-title {
+    font-family: 'Playfair Display;';
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+  }
+  button {
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #25282b;
+    border-radius: 10px;
+    padding: 5px, 20px;
+    margin-bottom: 10px;
+  }
+  
+  .projects-card.even .project-details {
+    order: 1;
+  }
+  
+  .projects-card.even .image {
+    order: 0;
+  }
+  
+  .projects-card.odd .project-details {
+    order: 0;
+  }
+  
+  .projects-card.odd .image {
+    order: 1;
+  }
+
+  .project-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+ 

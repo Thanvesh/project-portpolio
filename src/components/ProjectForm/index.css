@@ -1,0 +1,41 @@
+/* Write your CSS here */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .heading{
+    text-align: center;
+  }
+  textarea {
+    overflow: auto;
+    height: 70px;
+    margin: 0px;
+    align-items: flex-start;
+  }
+  label {
+    margin-bottom: 5px;
+    text-align: left;
+
+  }
+  
+  .Add-btn {
+    color: #25282b;
+    background-color: #fdc435;
+    border: 0px solid;
+    border-radius: 10px;
+    width: auto;
+    align-self: flex-end;
+    margin-right: 30%;
+
+  }
+  .description-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    
+  }
+  
