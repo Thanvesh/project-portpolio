@@ -75,7 +75,7 @@
   }
   
   .sec-right-container{
-    background-image: url("C:/Users/ADMIN/Downloads/yellow-bg.png") ;
+    background-image: url("../../../public/assets/images/yellow-bg.png") ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
