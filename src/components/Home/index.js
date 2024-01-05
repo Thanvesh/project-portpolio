@@ -1,5 +1,7 @@
 
 import ProjectForm from '../ProjectForm'
+
+import {Link} from "react-router-dom"
 import './index.css'
 
 const Home = () => {
@@ -16,9 +18,11 @@ const Home = () => {
             career. You can add more information on the about page.
           </p>
           <div className="buttons-container">
-            <button type="button" className="prj-btn">
-              Projects
-            </button>
+          <Link to="/projects">
+          <button type="button" className="prj-btn">
+            Projects
+          </button>
+        </Link>
             <button type="button" className="linkdin-btn">
               Linkedin
             </button>
