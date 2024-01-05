@@ -25,13 +25,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
     console.log('Connected to MongoDB');
 });
-app.use(
-    cors({
-        origin: "https://project-portpolio.vercel.app/",
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true,
-    })
-)
+app.use(cors());
+// app.use(
+//     cors({
+//         origin: "https://project-portpolio.vercel.app/",
+//         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//         credentials: true,
+//     })
+// )
 // Define the project schema
 const projectSchema = new mongoose.Schema({
     title: String,
