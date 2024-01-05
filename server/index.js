@@ -28,8 +28,8 @@ db.once('open', () => {
 app.use(
     cors({
         origin: "https://project-portpolio.vercel.app/",
-        methods: ["GET", "POST"],
-        credentials: true
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        credentials: true,
     })
 )
 // Define the project schema
@@ -56,6 +56,9 @@ app.get('/api/projects', async (req, res) => {
 
 // API endpoint to add a new project
 app.post('/api/projects', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', 'https://project-portpolio.vercel.app/');
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const { title, link, description, imageUrl } = req.body;
 
     try {
@@ -69,6 +72,9 @@ app.post('/api/projects', async (req, res) => {
 
 // API endpoint to delete a project by ID
 app.delete('/api/projects/:id', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', 'https://project-portpolio.vercel.app/');
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     const projectId = req.params.id;
 
     try {
