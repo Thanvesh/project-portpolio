@@ -78,19 +78,21 @@ class About extends Component {
     return (
       <div className="profile-container">
         <img className="profile-pic" src={profilePic} alt="Profile" />
-        <input type="file" accept="image/*" onChange={this.handleImageChange} />
-        <div className="edit-profile">Edit Profile</div>
-        <input
-          type="text"
-          value={name}
-          onChange={this.handleNameChange}
-          className="profile-name"
-        />
-        <textarea
-          value={description}
-          onChange={this.handleDescriptionChange}
-          className="profile-description"
-        />
+          <input type="file" accept="image/*" onChange={this.handleImageChange} />
+        <div className='profile-form-container'>
+          <div className="edit-profile">Edit Profile</div>
+          <input
+            type="text"
+            value={name}
+            onChange={this.handleNameChange}
+            className="profile-name"
+          />
+          <textarea
+            value={description}
+            onChange={this.handleDescriptionChange}
+            className="profile-description"
+          />
+        </div>
         <div className="skills">
           {skillsList.map(skill => (
             <div key={skill.name} className="skill">

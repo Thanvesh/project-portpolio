@@ -83,4 +83,10 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
-  
+  .profile-form-container{
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }

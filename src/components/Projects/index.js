@@ -30,8 +30,8 @@ const Projects=()=>{
         <ul className="project-container">
           {projects.map((each, index) => (
             <li className={`projects-card ${index % 2 === 0 ? 'even' : 'odd'}`}>
+              <h1 className="project-title">{each.title}</h1>
               <div className="project-details">
-                <h1 className="project-title">{each.title}</h1>
                 <p className="project-descr">{each.description}</p>
                 <button type="button">
                   <a href={each.link}>View Projects</a>
