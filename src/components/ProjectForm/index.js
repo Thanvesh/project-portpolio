@@ -2,6 +2,7 @@ import {Component} from 'react'
 import './index.css'
 import MySVGComponent from '../MySvg'
 
+var api = process.env.REACT_APP_API_URI;
 class ProjectForm extends Component {
   state = {
     title: '',
@@ -35,15 +36,16 @@ class ProjectForm extends Component {
 
   handleAddProject = async () => {
     const { title, link, description, imageUrl } = this.state;
-  
+
     try {
-      const response = await fetch('http://localhost:3005/api/projects', {
+      const response = await fetch(`${api}/api/projects`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ title, link, description, imageUrl }),
       });
+      localStorage.setItem("projects", [ ...localStorage.getItem("projects"), { title, link, description, imageUrl }]);
   
       if (response.ok) {
         // Assuming the server responds with a success message

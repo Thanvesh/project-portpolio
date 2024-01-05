@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./index.css"
 import Footer from "../Footer"
+var api = process.env.REACT_APP_API_URI;
 
 const Projects=()=>{
     const [projects, setProjects] = useState([]);
@@ -9,7 +10,7 @@ const Projects=()=>{
       // Fetch projects from the server when the component mounts
       const fetchProjects = async () => {
         try {
-          const response = await fetch('http://localhost:3005/api/projects');
+          const response = await fetch(`${api}/api/projects`);
           if (response.ok) {
             const data = await response.json();
             setProjects(data);
