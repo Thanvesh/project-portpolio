@@ -28,7 +28,8 @@ db.once('open', () => {
 app.use(
     cors({
         origin: "https://project-portpolio.vercel.app/",
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST"],
+        credentials: true
     })
 )
 // Define the project schema
