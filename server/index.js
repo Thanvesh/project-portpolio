@@ -27,7 +27,7 @@ db.once('open', () => {
 });
 app.use(
     cors({
-        origin: "*",
+        origin: "https://project-portpolio.vercel.app/",
         methods: ["GET", "POST"]
     })
 )
